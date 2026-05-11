@@ -1,0 +1,447 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Arctic Cognitum — an independent strategy consultancy</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles-v4.css" />
+</head>
+<body>
+
+  <nav class="nav" id="nav">
+    <div class="wrap nav-row">
+      <a href="#top" class="brand" aria-label="Arctic Cognitum home">
+        <svg class="brand-mark" viewBox="0 0 44 60" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 4 L5 56"/><path d="M20 4 L26 22"/><path d="M38 26 A14 14 0 1 0 38 46"/></svg>
+        <span>Arctic&nbsp;Cognitum</span>
+      </a>
+
+      <div class="nav-links-top">
+        <div class="nav-item">
+          <a class="nav-link" href="#practice">Our Practice</a>
+          <div class="megamenu"><div class="megamenu-inner-wrap">
+            <div class="megamenu-col-label">Industries</div>
+            <div class="megamenu-grid">
+              <a href="#">Financial Services</a>
+              <a href="#">Government &amp; Public Sector</a>
+              <a href="#">Energy &amp; Natural Resources</a>
+              <a href="#">Climate &amp; Sustainability</a>
+              <a href="#">Technology &amp; Communications</a>
+              <a href="#">Health &amp; Life Sciences</a>
+              <a href="#">Industrials &amp; Manufacturing</a>
+              <a href="#">Consumer &amp; Retail</a>
+              <a href="#">Transportation &amp; Logistics</a>
+            </div>
+            <div class="megamenu-col-label" style="margin-top: 56px;">Capabilities</div>
+            <div class="megamenu-grid">
+              <a href="#">Strategy &amp; Direction</a>
+              <a href="#">Applied Intelligence &amp; AI</a>
+              <a href="#">Risk &amp; Resilience</a>
+              <a href="#">Operating Model Design</a>
+              <a href="#">Diligence &amp; Transactions</a>
+              <a href="#">Standing Advisory</a>
+              <a href="#">Crisis &amp; War-games</a>
+              <a href="#">Executive Coaching</a>
+              <a href="#">Board Offsites</a>
+            </div>
+          </div></div>
+        </div>
+
+        <div class="nav-item">
+          <a class="nav-link" href="#dispatches">Our Insights</a>
+          <div class="megamenu"><div class="megamenu-inner-wrap">
+            <div class="megamenu-col-label">Long-form</div>
+            <div class="megamenu-grid">
+              <a href="#">Dispatches</a>
+              <a href="#">Essays</a>
+              <a href="#">Letters to the board</a>
+              <a href="#">Field notes</a>
+              <a href="#">Annual review</a>
+              <a href="#">Reading list</a>
+            </div>
+            <div class="megamenu-col-label" style="margin-top: 56px;">Programmes</div>
+            <div class="megamenu-grid">
+              <a href="#">Case studies</a>
+              <a href="#">Podcast</a>
+              <a href="#">Roundtables</a>
+            </div>
+          </div></div>
+        </div>
+
+        <div class="nav-item">
+          <a class="nav-link" href="#firm">Our Firm</a>
+          <div class="megamenu"><div class="megamenu-inner-wrap">
+            <div class="megamenu-col-label">About</div>
+            <div class="megamenu-grid">
+              <a href="#">Our practice</a>
+              <a href="#">Founding team</a>
+              <a href="#">Associates</a>
+              <a href="#">Values</a>
+              <a href="#">Offices</a>
+              <a href="#">Alumni</a>
+            </div>
+          </div></div>
+        </div>
+
+        <a class="nav-link" href="#">Careers</a>
+        <a class="nav-link" href="#">Press</a>
+      </div>
+
+      <div class="nav-right">
+        <button class="nav-icon-btn" aria-label="Region" type="button">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg>
+        </button>
+        <button class="nav-icon-btn" aria-label="Search" type="button">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="m20 20-3-3"/></svg>
+        </button>
+        <button class="hamburger" id="open-overlay" aria-label="Open menu" type="button">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Full-screen overlay menu -->
+  <div class="ovr" id="ovr" aria-hidden="true">
+    <div class="ovr-head">
+      <a href="#top" class="ovr-brand" aria-label="Arctic Cognitum home">
+        <svg class="brand-mark" viewBox="0 0 44 60" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 4 L5 56"/><path d="M20 4 L26 22"/><path d="M38 26 A14 14 0 1 0 38 46"/></svg>
+        <span>Arctic&nbsp;Cognitum</span>
+        <em class="ovr-brand-sub">an independent practice</em>
+      </a>
+      <button class="ovr-close" id="close-overlay" aria-label="Close menu" type="button">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 6l12 12M18 6 6 18"/></svg>
+      </button>
+    </div>
+
+    <div class="ovr-body">
+      <nav class="ovr-primary" aria-label="Primary">
+        <a href="#practice" class="ovr-primary-link" data-ovr-link>Our practice</a>
+        <a href="#dispatches" class="ovr-primary-link" data-ovr-link>Our insights</a>
+        <a href="#firm" class="ovr-primary-link" data-ovr-link>Our firm</a>
+        <a href="#" class="ovr-primary-link" data-ovr-link>Careers</a>
+        <a href="#" class="ovr-primary-link" data-ovr-link>Press &amp; media</a>
+      </nav>
+
+      <div class="ovr-mega">
+        <div class="ovr-group">
+          <h4 class="ovr-group-head">Industries</h4>
+          <div class="ovr-group-grid">
+            <a href="#" data-ovr-link>Financial services</a>
+            <a href="#" data-ovr-link>Government &amp; public sector</a>
+            <a href="#" data-ovr-link>Energy &amp; natural resources</a>
+            <a href="#" data-ovr-link>Climate &amp; sustainability</a>
+            <a href="#" data-ovr-link>Technology &amp; communications</a>
+            <a href="#" data-ovr-link>Health &amp; life sciences</a>
+            <a href="#" data-ovr-link>Industrials &amp; manufacturing</a>
+            <a href="#" data-ovr-link>Consumer &amp; retail</a>
+            <a href="#" data-ovr-link>Transportation &amp; logistics</a>
+          </div>
+        </div>
+
+        <div class="ovr-group">
+          <h4 class="ovr-group-head">Capabilities</h4>
+          <div class="ovr-group-grid">
+            <a href="#" data-ovr-link>Strategy &amp; direction</a>
+            <a href="#" data-ovr-link>Applied intelligence &amp; AI</a>
+            <a href="#" data-ovr-link>Risk &amp; resilience</a>
+            <a href="#" data-ovr-link>Operating model design</a>
+            <a href="#" data-ovr-link>Diligence &amp; transactions</a>
+            <a href="#" data-ovr-link>Standing advisory</a>
+            <a href="#" data-ovr-link>Crisis &amp; war-games</a>
+            <a href="#" data-ovr-link>Executive coaching</a>
+            <a href="#" data-ovr-link>Board offsites</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ovr-foot">
+      <a href="#" class="ovr-foot-link" data-ovr-link>Offices</a>
+      <a href="#begin" class="ovr-foot-link" data-ovr-link>Contact us</a>
+      <span class="ovr-foot-meta">Reykjavík · Tromsø</span>
+      <span class="ovr-foot-meta">© Arctic Cognitum · 2026</span>
+    </div>
+    <span class="ovr-handle" aria-hidden="true"></span>
+  </div>
+
+  <!-- =============== FEATURED HERO =============== -->
+  <header class="featured" id="top" data-screen-label="01 Featured">
+    <div class="featured-plate" id="feat-plate" aria-hidden="true"></div>
+    <canvas class="featured-canvas" id="storm-canvas"></canvas>
+
+    <div class="wrap featured-inner">
+      <div class="featured-main">
+        <div class="eyebrow" id="feat-eyebrow">Applied Intelligence</div>
+        <h1 class="featured-title" id="feat-title">
+          The decisions you cannot delegate to a <em>model</em>.
+        </h1>
+        <a href="#" class="read-more">
+          <span>Read more</span>
+          <span class="arrow" aria-hidden="true"></span>
+        </a>
+      </div>
+
+      <div class="feat-tabs" role="tablist">
+        <div class="feat-tabs-row">
+          <button class="feat-tab" role="tab" aria-selected="true" data-idx="0">
+            <span class="feat-tab-num">01</span>
+            <span>Applied Intelligence</span>
+          </button>
+          <button class="feat-tab" role="tab" aria-selected="false" data-idx="1">
+            <span class="feat-tab-num">02</span>
+            <span>Strategy &amp; Direction</span>
+          </button>
+          <button class="feat-tab" role="tab" aria-selected="false" data-idx="2">
+            <span class="feat-tab-num">03</span>
+            <span>Risk &amp; Resilience</span>
+          </button>
+          <button class="feat-tab" role="tab" aria-selected="false" data-idx="3">
+            <span class="feat-tab-num">04</span>
+            <span>Standing Advisory</span>
+          </button>
+        </div>
+      </div>
+      <span class="feat-scroll" aria-hidden="true">Scroll</span>
+    </div>
+  </header>
+
+  <!-- =============== 4-UP ARTICLES =============== -->
+  <section class="four-up" id="dispatches" data-screen-label="02 Dispatches">
+    <div class="wrap">
+      <div class="four-up-head">
+        <div>
+          <span class="section-eyebrow">§ 01 — Dispatches</span>
+          <h2>Long-form writing from the <em>field</em>.</h2>
+        </div>
+        <a href="#" class="head-right">
+          All dispatches
+          <span class="article-arrow"><span class="a"></span></span>
+        </a>
+      </div>
+
+      <div class="articles-grid">
+        <a class="article" href="#">
+          <div class="article-image">
+            <div class="plate plate-a"></div>
+            <span class="plate-tag">Plate 02 — Essay</span>
+          </div>
+          <div class="article-meta">
+            <span>Essay</span>
+            <span class="dot"></span>
+            <span>2026 · 04 · 12</span>
+          </div>
+          <h3 class="article-title">
+            What the maps cannot tell you about your <em>next</em> market.
+          </h3>
+          <span class="article-arrow">Read <span class="a"></span></span>
+        </a>
+
+        <a class="article" href="#">
+          <div class="article-image">
+            <div class="plate plate-b"></div>
+            <span class="plate-tag">Plate 03 — Case</span>
+          </div>
+          <div class="article-meta">
+            <span>Case</span>
+            <span class="dot"></span>
+            <span>2026 · 03 · 28</span>
+          </div>
+          <h3 class="article-title">
+            How a European bank rebuilt its <em>risk</em> function in eleven months.
+          </h3>
+          <span class="article-arrow">Read <span class="a"></span></span>
+        </a>
+
+        <a class="article" href="#">
+          <div class="article-image">
+            <div class="plate plate-c"></div>
+            <span class="plate-tag">Plate 04 — Note</span>
+          </div>
+          <div class="article-meta">
+            <span>Note</span>
+            <span class="dot"></span>
+            <span>2026 · 03 · 06</span>
+          </div>
+          <h3 class="article-title">
+            A short letter on <em>agentic</em> systems and the limits of pilots.
+          </h3>
+          <span class="article-arrow">Read <span class="a"></span></span>
+        </a>
+
+        <a class="article" href="#">
+          <div class="article-image">
+            <div class="plate plate-d"></div>
+            <span class="plate-tag">Plate 05 — Report</span>
+          </div>
+          <div class="article-meta">
+            <span>Report</span>
+            <span class="dot"></span>
+            <span>2026 · 02 · 18</span>
+          </div>
+          <h3 class="article-title">
+            The <em>cold-water</em> playbook for board-level AI decisions.
+          </h3>
+          <span class="article-arrow">Read <span class="a"></span></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============== PRACTICE STRIP =============== -->
+  <section class="practice-strip" id="practice" data-screen-label="03 Practice">
+    <div class="wrap">
+      <div class="practice-strip-head">
+        <div>
+          <span class="section-eyebrow">§ 02 — Practice</span>
+          <h2>Four practices, one <em>discipline</em>.</h2>
+        </div>
+        <p>
+          We work with a deliberately small number of boards, cabinets and executive
+          teams each year — on the decisions that don't yet have a clean dataset
+          behind them, and the institutions that have to make them anyway.
+        </p>
+      </div>
+
+      <div class="practice-rows">
+        <a class="practice-row" href="#">
+          <span class="pn">01</span>
+          <h3>Strategy &amp; <em>direction</em></h3>
+          <p>Multi-month engagements with leadership teams on the single decision that matters most — where to point the institution in the next five years, and what to stop doing tomorrow.</p>
+          <span class="pgo">Practice <span class="a"></span></span>
+        </a>
+        <a class="practice-row" href="#">
+          <span class="pn">02</span>
+          <h3>Applied <em>intelligence</em></h3>
+          <p>The adoption of machine intelligence in the parts of the business where the cost of being wrong is real — risk, operations, regulated decisions, customer outcomes.</p>
+          <span class="pgo">Practice <span class="a"></span></span>
+        </a>
+        <a class="practice-row" href="#">
+          <span class="pn">03</span>
+          <h3>Expeditions &amp; <em>short briefs</em></h3>
+          <p>A senior team for a single, time-bound question — a deal week, a board offsite, a crisis response. We arrive prepared, work on-site, and leave a written report behind.</p>
+          <span class="pgo">Practice <span class="a"></span></span>
+        </a>
+        <a class="practice-row" href="#">
+          <span class="pn">04</span>
+          <h3>Standing <em>advisory</em></h3>
+          <p>A long-running, low-noise relationship with a small number of CEOs and boards. Quarterly sessions, on-call between, and an annual written review.</p>
+          <span class="pgo">Practice <span class="a"></span></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============== FOOTER =============== -->
+  <footer class="footer" id="firm">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <div class="brand" style="color:#fff;">
+            <svg class="brand-mark" viewBox="0 0 44 60" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 4 L5 56"/><path d="M20 4 L26 22"/><path d="M38 26 A14 14 0 1 0 38 46"/></svg>
+            <span>Arctic&nbsp;Cognitum</span>
+          </div>
+          <div class="footer-tagline">Clarity · Insight · Direction</div>
+          <p>An independent consultancy. Berlin and Longyearbyen. A small number of engagements each year.</p>
+        </div>
+        <div>
+          <h4>Practice</h4>
+          <ul><li>Strategy</li><li>Applied AI</li><li>Expeditions</li><li>Advisory</li></ul>
+        </div>
+        <div>
+          <h4>Firm</h4>
+          <ul><li>About</li><li>Team</li><li>Dispatches</li><li>Press</li></ul>
+        </div>
+        <div>
+          <h4>Correspond</h4>
+          <ul><li>hello@arcticcognitum.com</li><li>+47 79 02 00 00</li><li>Longyearbyen, SJ</li><li>Berlin, DE</li></ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Arctic Cognitum AS</span>
+        <span>78°55′N · 11°56′E</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="snowstorm.js"></script>
+  <script>
+    // mount the storm, subtle by default
+    window.__storm = window.Snowstorm.mount(
+      document.getElementById('storm-canvas'),
+      { intensity: 'subtle' }
+    );
+
+    // nav background on scroll
+    const nav = document.getElementById('nav');
+    const onScroll = () => nav.classList.toggle('is-scrolled', window.scrollY > 80);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+
+    // Overlay menu wiring (full-screen, drops down from top)
+    const ovr = document.getElementById('ovr');
+    function openOvr(){
+      ovr.classList.add('is-open');
+      ovr.setAttribute('aria-hidden','false');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeOvr(){
+      ovr.classList.remove('is-open');
+      ovr.setAttribute('aria-hidden','true');
+      document.body.style.overflow = '';
+    }
+    document.getElementById('open-overlay').addEventListener('click', openOvr);
+    document.getElementById('close-overlay').addEventListener('click', closeOvr);
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeOvr(); });
+    ovr.querySelectorAll('[data-ovr-link]').forEach(a => a.addEventListener('click', closeOvr));
+
+    // feature tab rotator
+    const tabs = document.querySelectorAll('.feat-tab');
+    const title = document.getElementById('feat-title');
+    const eyebrow = document.getElementById('feat-eyebrow');
+    const plate = document.getElementById('feat-plate');
+    const data = [
+      { eyebrow: 'Applied Intelligence', title: 'The decisions you cannot delegate to a <em>model</em>.', plate: 'b' },
+      { eyebrow: 'Strategy & Direction', title: 'Strategy for the <em>cold-water</em> decisions.', plate: 'a' },
+      { eyebrow: 'Risk & Resilience', title: 'When the dashboards <em>stop</em> being enough.', plate: 'd' },
+      { eyebrow: 'Standing Advisory', title: 'A small practice for <em>long</em>, quiet relationships.', plate: 'c' },
+    ];
+    function setActive(i){
+      tabs.forEach((t, k) => t.setAttribute('aria-selected', k===i ? 'true' : 'false'));
+      const d = data[i];
+      title.style.opacity = '0';
+      eyebrow.style.opacity = '0';
+      setTimeout(() => {
+        title.innerHTML = d.title;
+        eyebrow.textContent = d.eyebrow;
+        plate.className = 'featured-plate';
+        plate.style.background = '';
+        if (d.plate === 'a') {
+          plate.style.background = "linear-gradient(180deg, rgba(5,10,18,0.35) 0%, rgba(5,10,18,0.55) 100%), url('assets/plate-strategy-direction.png') center/cover no-repeat";
+        }
+        if (d.plate === 'b') {
+          plate.style.background = "linear-gradient(180deg, rgba(5,10,18,0.35) 0%, rgba(5,10,18,0.55) 100%), url('assets/plate-applied-intelligence.png') center/cover no-repeat";
+        }
+        if (d.plate === 'c') {
+          plate.style.background = "linear-gradient(180deg, rgba(5,10,18,0.35) 0%, rgba(5,10,18,0.55) 100%), url('assets/plate-standing-advisory.png') center/cover no-repeat";
+        }
+        if (d.plate === 'd') {
+          plate.style.background = "linear-gradient(180deg, rgba(5,10,18,0.35) 0%, rgba(5,10,18,0.55) 100%), url('assets/plate-risk-resilience.png') center/cover no-repeat";
+        }
+        title.style.opacity = '1';
+        eyebrow.style.opacity = '1';
+      }, 240);
+    }
+    tabs.forEach((t,i) => t.addEventListener('click', () => setActive(i)));
+    title.style.transition = 'opacity .35s ease';
+    eyebrow.style.transition = 'opacity .35s ease';
+
+    // auto-rotate
+    let idx = 0;
+    setInterval(() => { idx = (idx + 1) % data.length; setActive(idx); }, 6500);
+  </script>
+</body>
+</html>
