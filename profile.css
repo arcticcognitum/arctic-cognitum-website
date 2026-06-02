@@ -1,0 +1,166 @@
+/* Arctic Cognitum — profile page (Markus N. Torgersen)
+   Reuses tokens + .wrap + .footer from styles-v4.css */
+
+.profile-page{ background: var(--bg); color: var(--ink); }
+
+/* ---------- nav ---------- */
+.pnav{
+  position: sticky; top: 0; z-index: 50;
+  background: color-mix(in oklch, var(--bg) 88%, transparent);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--rule);
+}
+.pnav-row{ display: flex; align-items: center; justify-content: space-between; height: 72px; }
+.pnav .brand{ color: var(--ink); }
+.pnav-links{ display: flex; gap: 28px; }
+.pnav-links a{
+  font-family: var(--ff-mono); font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--ink-2); text-decoration: none; transition: color .18s ease;
+}
+.pnav-links a:hover{ color: var(--accent); }
+
+/* ---------- shared section eyebrow ---------- */
+.profile-page .section-eyebrow{
+  font-family: var(--ff-mono); font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--muted); margin-bottom: 16px; display: block;
+}
+
+/* ---------- hero ---------- */
+.profile-hero{ padding: clamp(48px, 7vw, 96px) 0 clamp(40px, 5vw, 72px); }
+.profile-hero-inner{
+  display: grid; grid-template-columns: 360px 1fr; gap: clamp(36px, 6vw, 80px);
+  align-items: center;
+}
+.profile-photo{
+  border-radius: 14px; overflow: hidden; background: var(--rule);
+  aspect-ratio: 3 / 4; box-shadow: 0 30px 60px -30px rgba(8,16,28,0.45);
+}
+.profile-photo img{ width: 100%; height: 100%; object-fit: cover; display: block; }
+.profile-eyebrow{
+  font-family: var(--ff-mono); font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--muted); display: block; margin-bottom: 18px;
+}
+.profile-name{
+  font-family: var(--ff-sans); font-weight: 600;
+  font-size: clamp(38px, 6vw, 76px); line-height: 1.02; letter-spacing: -0.025em;
+  margin: 0;
+}
+.profile-name em{ font-family: var(--ff-serif); font-style: italic; font-weight: 500; color: var(--ink-2); }
+.profile-positioning{
+  font-size: clamp(17px, 1.7vw, 21px); line-height: 1.5; color: var(--ink-2);
+  max-width: 46ch; margin: 22px 0 0;
+}
+.profile-contact{ display: flex; flex-wrap: wrap; gap: 14px 28px; margin-top: 30px; }
+.profile-contact a{
+  font-family: var(--ff-mono); font-size: 13px; letter-spacing: 0.02em;
+  color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--rule-2);
+  padding-bottom: 3px; transition: color .18s ease, border-color .18s ease;
+}
+.profile-contact a:hover{ color: var(--accent); border-color: var(--accent); }
+.profile-loc{
+  display: block; margin-top: 22px;
+  font-family: var(--ff-mono); font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--muted);
+}
+
+/* ---------- generic section ---------- */
+.profile-section{ padding: clamp(56px, 8vw, 104px) 0; border-top: 1px solid var(--rule); }
+.profile-section h2{
+  font-family: var(--ff-sans); font-weight: 600;
+  font-size: clamp(28px, 3.2vw, 46px); line-height: 1.06; letter-spacing: -0.02em; margin: 0;
+}
+.profile-section h2 em{ font-family: var(--ff-serif); font-style: italic; font-weight: 500; color: var(--ink-2); }
+
+/* ---------- bio ---------- */
+.bio-grid{ display: grid; grid-template-columns: 220px 1fr; gap: clamp(24px, 5vw, 72px); }
+.bio p{ font-size: clamp(19px, 2vw, 25px); line-height: 1.55; color: var(--ink); margin: 0 0 22px; max-width: 40ch; }
+.bio p:last-child{ margin-bottom: 0; color: var(--ink-2); }
+.bio p em{ font-family: var(--ff-serif); font-style: italic; color: var(--ink); }
+
+/* ---------- competency ---------- */
+.competency{ background: var(--bg-soft); }
+.comp-head{ display: grid; grid-template-columns: 1fr 1fr; gap: clamp(28px, 6vw, 88px); align-items: end; }
+.comp-lead{ font-size: 17px; line-height: 1.6; color: var(--ink-2); margin: 0; max-width: 52ch; }
+.axis-triad{
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+  margin: clamp(36px, 5vw, 56px) 0;
+  border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule);
+  padding: 32px 0;
+}
+.axis-tag{
+  font-family: var(--ff-sans); font-weight: 600; font-size: 15px; letter-spacing: -0.01em;
+  display: block; margin-bottom: 8px;
+}
+.axis p{ font-size: 14px; line-height: 1.5; color: var(--ink-2); margin: 0; }
+
+.comp-filters{ display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 32px; }
+.comp-filters button{
+  font-family: var(--ff-mono); font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase;
+  color: var(--ink-2); background: transparent;
+  border: 1px solid var(--rule-2); border-radius: 999px; padding: 9px 16px;
+  cursor: pointer; transition: all .18s ease;
+}
+.comp-filters button:hover{ border-color: var(--ink-2); color: var(--ink); }
+.comp-filters button.is-active{ background: var(--ink); color: var(--bg); border-color: var(--ink); }
+
+.proof-grid{ display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: var(--rule); border: 1px solid var(--rule); }
+.proof-card{ background: var(--bg-soft); padding: 28px 26px; display: flex; flex-direction: column; gap: 12px; }
+.proof-card.is-hidden{ display: none; }
+.proof-card h3{
+  font-family: var(--ff-sans); font-weight: 600; font-size: 18px; letter-spacing: -0.01em; margin: 0;
+}
+.proof-card p{ font-size: 14.5px; line-height: 1.55; color: var(--ink-2); margin: 0; flex: 1; }
+.axis-bars{ display: flex; flex-direction: column; gap: 6px; margin-top: 6px; }
+.ab{ display: grid; grid-template-columns: 16px 1fr; gap: 10px; align-items: center; }
+.ab-l{ font-family: var(--ff-mono); font-size: 10px; color: var(--muted); }
+.ab-t{ height: 3px; background: var(--rule); border-radius: 2px; overflow: hidden; }
+.ab-t i{ display: block; height: 100%; background: var(--accent); }
+
+/* ---------- experience ---------- */
+.xp-title{ margin-bottom: 12px; }
+.xp-list{ border-top: 1px solid var(--rule); margin-top: 40px; }
+.xp-row{
+  display: grid; grid-template-columns: 200px 1fr; gap: clamp(20px, 4vw, 56px);
+  padding: 30px 0; border-bottom: 1px solid var(--rule);
+}
+.xp-period{ font-family: var(--ff-mono); font-size: 12px; letter-spacing: 0.12em; color: var(--muted); padding-top: 5px; }
+.xp-body h3{
+  font-family: var(--ff-sans); font-weight: 600; font-size: clamp(19px, 1.8vw, 24px);
+  letter-spacing: -0.01em; margin: 0 0 8px;
+}
+.xp-body h3 span{ color: var(--ink-2); font-weight: 500; }
+.xp-body p{ font-size: 15.5px; line-height: 1.6; color: var(--ink-2); margin: 0; max-width: 64ch; }
+
+/* ---------- credentials ---------- */
+.creds{ background: var(--bg-soft); }
+.creds-grid{ display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(28px, 5vw, 64px); }
+.creds-col ul{ list-style: none; margin: 0; padding: 0; display: grid; gap: 22px; }
+.creds-col li{ display: flex; flex-direction: column; gap: 3px; }
+.creds-col li strong{ font-family: var(--ff-sans); font-weight: 600; font-size: 15.5px; }
+.creds-col li span{ font-size: 13.5px; color: var(--ink-2); line-height: 1.45; }
+
+/* ---------- footer ---------- */
+.profile-footer{ padding: 56px 0; }
+.profile-footer-row{ display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
+.profile-footer-links{ display: flex; gap: 26px; }
+.profile-footer-links a{
+  font-family: var(--ff-mono); font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase;
+  color: oklch(0.78 0.01 240); text-decoration: none; transition: color .18s ease;
+}
+.profile-footer-links a:hover{ color: #fff; }
+.profile-footer-meta{
+  font-family: var(--ff-mono); font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase;
+  color: oklch(0.6 0.01 240);
+}
+
+/* ---------- responsive ---------- */
+@media (max-width: 860px){
+  .profile-hero-inner{ grid-template-columns: 1fr; gap: 32px; }
+  .profile-photo{ max-width: 300px; }
+  .bio-grid{ grid-template-columns: 1fr; gap: 8px; }
+  .comp-head{ grid-template-columns: 1fr; gap: 18px; }
+  .axis-triad{ grid-template-columns: 1fr; gap: 20px; }
+  .proof-grid{ grid-template-columns: 1fr; }
+  .xp-row{ grid-template-columns: 1fr; gap: 8px; }
+  .creds-grid{ grid-template-columns: 1fr; gap: 32px; }
+}
