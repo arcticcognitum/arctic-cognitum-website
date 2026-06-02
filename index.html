@@ -170,8 +170,11 @@
 
   <!-- =============== FEATURED HERO =============== -->
   <header class="featured" id="top" data-screen-label="01 Featured">
+    <video class="featured-video" id="feat-video" muted loop playsinline preload="none" aria-hidden="true" poster="assets/plate-standing-advisory.png">
+      <source src="assets/video/standing-advisory.webm" type="video/webm" />
+      <source src="assets/video/standing-advisory.mp4" type="video/mp4" />
+    </video>
     <div class="featured-plate" id="feat-plate" aria-hidden="true"></div>
-    <canvas class="featured-canvas" id="storm-canvas"></canvas>
 
     <div class="wrap featured-inner">
       <div class="featured-main">
@@ -367,14 +370,7 @@
     </div>
   </footer>
 
-  <script src="snowstorm.js"></script>
   <script>
-    // mount the storm, subtle by default
-    window.__storm = window.Snowstorm.mount(
-      document.getElementById('storm-canvas'),
-      { intensity: 'subtle' }
-    );
-
     // nav background on scroll
     const nav = document.getElementById('nav');
     const onScroll = () => nav.classList.toggle('is-scrolled', window.scrollY > 80);
@@ -403,6 +399,8 @@
     const title = document.getElementById('feat-title');
     const eyebrow = document.getElementById('feat-eyebrow');
     const plate = document.getElementById('feat-plate');
+    const featVideo = document.getElementById('feat-video');
+    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     const data = [
       { eyebrow: 'Applied Intelligence', title: 'The decisions you cannot delegate to a <em>model</em>.', plate: 'b' },
       { eyebrow: 'Strategy & Direction', title: 'Strategy for the <em>cold-water</em> decisions.', plate: 'a' },
@@ -419,17 +417,24 @@
         eyebrow.textContent = d.eyebrow;
         plate.className = 'featured-plate';
         plate.style.background = '';
-        if (d.plate === 'a') {
-          plate.style.background = "linear-gradient(180deg, rgba(5,10,18,0.35) 0%, rgba(5,10,18,0.55) 100%), url('assets/plate-strategy-direction.png') center/cover no-repeat";
-        }
-        if (d.plate === 'b') {
-          plate.style.background = "linear-gradient(180deg, rgba(5,10,18,0.35) 0%, rgba(5,10,18,0.55) 100%), url('assets/plate-applied-intelligence.png') center/cover no-repeat";
-        }
-        if (d.plate === 'c') {
-          plate.style.background = "linear-gradient(180deg, rgba(5,10,18,0.35) 0%, rgba(5,10,18,0.55) 100%), url('assets/plate-standing-advisory.png') center/cover no-repeat";
-        }
-        if (d.plate === 'd') {
-          plate.style.background = "linear-gradient(180deg, rgba(5,10,18,0.35) 0%, rgba(5,10,18,0.55) 100%), url('assets/plate-risk-resilience.png') center/cover no-repeat";
+        const plateImg = {
+          a: 'assets/plate-strategy-direction.png',
+          b: 'assets/plate-applied-intelligence.png',
+          c: 'assets/plate-standing-advisory.png',
+          d: 'assets/plate-risk-resilience.png',
+        };
+        const stillBg = (src) =>
+          "linear-gradient(180deg, rgba(5,10,18,0.35) 0%, rgba(5,10,18,0.55) 100%), url('" + src + "') center/cover no-repeat";
+
+        if (d.plate === 'c' && !prefersReduced) {
+          // Standing Advisory: living video background; plate becomes a translucent scrim
+          plate.style.background = "linear-gradient(180deg, rgba(5,10,18,0.30) 0%, rgba(5,10,18,0.45) 100%)";
+          featVideo.classList.add('is-active');
+          featVideo.play().catch(() => {});
+        } else {
+          featVideo.classList.remove('is-active');
+          featVideo.pause();
+          plate.style.background = stillBg(plateImg[d.plate]);
         }
         title.style.opacity = '1';
         eyebrow.style.opacity = '1';

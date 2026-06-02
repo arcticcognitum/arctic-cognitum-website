@@ -1,0 +1,5 @@
+.veo-venv/
+.env
+*.mp4.tmp
+.claude/launch.json
+raw/
