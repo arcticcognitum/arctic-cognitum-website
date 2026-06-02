@@ -170,7 +170,11 @@
 
   <!-- =============== FEATURED HERO =============== -->
   <header class="featured" id="top" data-screen-label="01 Featured">
-    <video class="featured-video" id="feat-video" muted loop playsinline preload="none" aria-hidden="true" poster="assets/plate-standing-advisory.png">
+    <video class="featured-video" data-plate="b" muted loop playsinline preload="none" aria-hidden="true" poster="assets/plate-applied-intelligence.png">
+      <source src="assets/video/applied-intelligence.webm" type="video/webm" />
+      <source src="assets/video/applied-intelligence.mp4" type="video/mp4" />
+    </video>
+    <video class="featured-video" data-plate="c" muted loop playsinline preload="none" aria-hidden="true" poster="assets/plate-standing-advisory.png">
       <source src="assets/video/standing-advisory.webm" type="video/webm" />
       <source src="assets/video/standing-advisory.mp4" type="video/mp4" />
     </video>
@@ -399,7 +403,9 @@
     const title = document.getElementById('feat-title');
     const eyebrow = document.getElementById('feat-eyebrow');
     const plate = document.getElementById('feat-plate');
-    const featVideo = document.getElementById('feat-video');
+    const featVideos = document.querySelectorAll('.featured-video');
+    const videoByPlate = {};
+    featVideos.forEach(v => { videoByPlate[v.dataset.plate] = v; });
     const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     const data = [
       { eyebrow: 'Applied Intelligence', title: 'The decisions you cannot delegate to a <em>model</em>.', plate: 'b' },
@@ -426,14 +432,17 @@
         const stillBg = (src) =>
           "linear-gradient(180deg, rgba(5,10,18,0.35) 0%, rgba(5,10,18,0.55) 100%), url('" + src + "') center/cover no-repeat";
 
-        if (d.plate === 'c' && !prefersReduced) {
-          // Standing Advisory: living video background; plate becomes a translucent scrim
+        const vid = videoByPlate[d.plate];
+        // pause/hide any video that isn't the one for this plate
+        featVideos.forEach(v => { if (v !== vid) { v.classList.remove('is-active'); v.pause(); } });
+
+        if (vid && !prefersReduced) {
+          // living video background; plate becomes a translucent scrim for text legibility
           plate.style.background = "linear-gradient(180deg, rgba(5,10,18,0.30) 0%, rgba(5,10,18,0.45) 100%)";
-          featVideo.classList.add('is-active');
-          featVideo.play().catch(() => {});
+          vid.classList.add('is-active');
+          vid.play().catch(() => {});
         } else {
-          featVideo.classList.remove('is-active');
-          featVideo.pause();
+          if (vid) { vid.classList.remove('is-active'); vid.pause(); }
           plate.style.background = stillBg(plateImg[d.plate]);
         }
         title.style.opacity = '1';
@@ -443,6 +452,9 @@
     tabs.forEach((t,i) => t.addEventListener('click', () => setActive(i)));
     title.style.transition = 'opacity .35s ease';
     eyebrow.style.transition = 'opacity .35s ease';
+
+    // activate the first tab on load so its video background plays immediately
+    setActive(0);
 
     // auto-rotate
     let idx = 0;
