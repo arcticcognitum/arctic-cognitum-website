@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Page not found — Arctic Cognitum</title>
+  <meta name="robots" content="noindex" />
+  <meta name="theme-color" content="#0b1622" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Cormorant+Garamond:ital,wght@1,400;1,500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles-v4.css" />
+  <style>
+    .nf{
+      min-height: 100vh;
+      background: linear-gradient(180deg, var(--deep-2) 0%, var(--deep) 60%, #0d2030 100%);
+      color: #fff;
+      display: grid; place-items: center;
+      text-align: center;
+      padding: var(--gutter);
+    }
+    .nf-code{
+      font-family: var(--ff-mono);
+      font-size: 11px; letter-spacing: 0.24em; text-transform: uppercase;
+      color: rgba(255,255,255,.55);
+      display: block; margin-bottom: 18px;
+    }
+    .nf h1{
+      font-family: var(--ff-sans); font-weight: 600;
+      font-size: clamp(28px, 4vw, 48px); line-height: 1.1; letter-spacing: -0.015em;
+      margin: 0 0 14px; text-wrap: balance;
+    }
+    .nf h1 em{ font-family: var(--ff-serif); font-style: italic; font-weight: 500; color: var(--ice); }
+    .nf p{ color: rgba(255,255,255,.7); font-size: 16px; margin: 0 0 32px; }
+    .nf a.home{
+      display: inline-flex; align-items: center; gap: 14px;
+      font-size: 12px; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase;
+      color: #fff; border-bottom: 1px solid rgba(255,255,255,.35); padding-bottom: 6px;
+    }
+  </style>
+</head>
+<body>
+  <main class="nf">
+    <div>
+      <span class="nf-code">404 — Not found</span>
+      <h1>This page is still <em>off the map</em>.</h1>
+      <p>The address you followed doesn't exist — or doesn't exist yet.</p>
+      <a class="home" href="/">Return to Arctic Cognitum</a>
+    </div>
+  </main>
+</body>
+</html>

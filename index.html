@@ -10,8 +10,8 @@
 
   <!-- Favicons -->
   <link rel="icon" href="favicon.svg" type="image/svg+xml" />
-  <link rel="alternate icon" href="brand/ac-mark.png" type="image/png" />
-  <link rel="apple-touch-icon" href="brand/ac-mark.png" />
+  <link rel="alternate icon" href="brand/ac-mark-180.png" type="image/png" />
+  <link rel="apple-touch-icon" href="brand/ac-mark-180.png" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
@@ -19,21 +19,47 @@
   <meta property="og:title" content="Arctic Cognitum — independent advisory for banking &amp; capital markets" />
   <meta property="og:description" content="An independent advisory practice for banking and capital markets. A small number of board and executive engagements each year. Based in Narvik, Norway." />
   <meta property="og:url" content="https://arcticcognitum.com/" />
-  <meta property="og:image" content="https://arcticcognitum.com/assets/plate-applied-intelligence.png" />
-  <meta property="og:locale" content="en" />
+  <meta property="og:image" content="https://arcticcognitum.com/assets/og-image.jpg" />
+  <meta property="og:locale" content="en_GB" />
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Arctic Cognitum — independent advisory for banking &amp; capital markets" />
   <meta name="twitter:description" content="An independent advisory practice for banking and capital markets. Based in Narvik, Norway." />
-  <meta name="twitter:image" content="https://arcticcognitum.com/assets/plate-applied-intelligence.png" />
+  <meta name="twitter:image" content="https://arcticcognitum.com/assets/og-image.jpg" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles-v4.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Arctic Cognitum",
+    "legalName": "Arctic Cognitum AS",
+    "url": "https://arcticcognitum.com/",
+    "description": "An independent advisory practice for banking and capital markets, and applied AI. A small number of board and executive engagements each year.",
+    "email": "hello@arcticcognitum.com",
+    "telephone": "+47 901 70 053",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Narvik",
+      "addressCountry": "NO"
+    },
+    "founder": {
+      "@type": "Person",
+      "name": "Markus N. Torgersen",
+      "url": "https://arcticcognitum.com/markus.html"
+    },
+    "knowsAbout": ["Banking", "Capital markets", "Applied AI", "Risk management", "Strategy"]
+  }
+  </script>
 </head>
 <body>
+
+  <a class="skip-link" href="#main">Skip to content</a>
 
   <nav class="nav" id="nav">
     <div class="wrap nav-row">
@@ -148,7 +174,7 @@
 
       <div class="ovr-mega">
         <div class="ovr-group">
-          <h4 class="ovr-group-head">Banking &amp; Capital Markets</h4>
+          <div class="ovr-group-head">Banking &amp; Capital Markets</div>
           <div class="ovr-group-grid">
             <a href="#" data-ovr-link>Retail &amp; commercial banking</a>
             <a href="#" data-ovr-link>Investment banking</a>
@@ -160,7 +186,7 @@
         </div>
 
         <div class="ovr-group">
-          <h4 class="ovr-group-head">Capabilities</h4>
+          <div class="ovr-group-head">Capabilities</div>
           <div class="ovr-group-grid">
             <a href="#" data-ovr-link>Strategy &amp; direction</a>
             <a href="#" data-ovr-link>Applied intelligence &amp; AI</a>
@@ -184,12 +210,13 @@
   </div>
 
   <!-- =============== FEATURED HERO =============== -->
+  <main id="main">
   <header class="featured" id="top" data-screen-label="01 Featured">
-    <video class="featured-video" data-plate="b" muted loop playsinline preload="none" aria-hidden="true" poster="assets/plate-applied-intelligence.png">
+    <video class="featured-video" data-plate="b" muted loop playsinline preload="none" aria-hidden="true" poster="assets/plate-applied-intelligence.webp">
       <source src="assets/video/applied-intelligence.webm" type="video/webm" />
       <source src="assets/video/applied-intelligence.mp4" type="video/mp4" />
     </video>
-    <video class="featured-video" data-plate="c" muted loop playsinline preload="none" aria-hidden="true" poster="assets/plate-standing-advisory.png">
+    <video class="featured-video" data-plate="c" muted loop playsinline preload="none" aria-hidden="true" poster="assets/plate-standing-advisory.webp">
       <source src="assets/video/standing-advisory.webm" type="video/webm" />
       <source src="assets/video/standing-advisory.mp4" type="video/mp4" />
     </video>
@@ -323,7 +350,7 @@
           <h2>Four practices, one <em>discipline</em>.</h2>
         </div>
         <p>
-          We work with a deliberately small number of boards, cabinets and executive
+          We work with a deliberately small number of boards and executive
           teams each year — on the decisions that don't yet have a clean dataset
           behind them, and the institutions that have to make them anyway.
         </p>
@@ -384,6 +411,7 @@
       </div>
     </div>
   </section>
+  </main>
 
   <!-- =============== FOOTER =============== -->
   <footer class="footer" id="firm">
@@ -398,15 +426,15 @@
           <p>An independent consultancy. Narvik. A small number of engagements each year.</p>
         </div>
         <div>
-          <h4>Practice</h4>
+          <h3>Practice</h3>
           <ul><li>Strategy</li><li>Applied AI</li><li>Expeditions</li><li>Advisory</li></ul>
         </div>
         <div>
-          <h4>Firm</h4>
+          <h3>Firm</h3>
           <ul><li>About</li><li>Team</li><li>Dispatches</li><li>Press</li></ul>
         </div>
         <div>
-          <h4>Correspond</h4>
+          <h3>Correspond</h3>
           <ul><li><a href="mailto:hello@arcticcognitum.com">hello@arcticcognitum.com</a></li><li><a href="tel:+4790170053">+47 901 70 053</a></li><li>Narvik, NO</li></ul>
         </div>
       </div>
@@ -426,19 +454,34 @@
 
     // Overlay menu wiring (full-screen, drops down from top)
     const ovr = document.getElementById('ovr');
+    let ovrLastFocus = null;
     function openOvr(){
+      ovrLastFocus = document.activeElement;
       ovr.classList.add('is-open');
       ovr.setAttribute('aria-hidden','false');
       document.body.style.overflow = 'hidden';
+      // wait for the style recalc that makes the overlay visible (focusable)
+      requestAnimationFrame(() => document.getElementById('close-overlay').focus());
     }
     function closeOvr(){
+      if (!ovr.classList.contains('is-open')) return;
       ovr.classList.remove('is-open');
       ovr.setAttribute('aria-hidden','true');
       document.body.style.overflow = '';
+      if (ovrLastFocus && ovrLastFocus.focus) ovrLastFocus.focus();
     }
     document.getElementById('open-overlay').addEventListener('click', openOvr);
     document.getElementById('close-overlay').addEventListener('click', closeOvr);
     document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeOvr(); });
+    // keep Tab inside the overlay while it is open
+    ovr.addEventListener('keydown', (e) => {
+      if (e.key !== 'Tab') return;
+      const items = [...ovr.querySelectorAll('a, button')].filter(el => el.offsetParent !== null);
+      if (!items.length) return;
+      const first = items[0], last = items[items.length - 1];
+      if (e.shiftKey && document.activeElement === first){ last.focus(); e.preventDefault(); }
+      else if (!e.shiftKey && document.activeElement === last){ first.focus(); e.preventDefault(); }
+    });
     ovr.querySelectorAll('[data-ovr-link]').forEach(a => a.addEventListener('click', closeOvr));
 
     // feature tab rotator
@@ -457,20 +500,20 @@
       { eyebrow: 'Standing Advisory', title: 'A small practice for <em>long</em>, quiet relationships.', plate: 'c' },
     ];
     function setActive(i){
-      tabs.forEach((t, k) => t.setAttribute('aria-selected', k===i ? 'true' : 'false'));
       const d = data[i];
       title.style.opacity = '0';
       eyebrow.style.opacity = '0';
       setTimeout(() => {
+        tabs.forEach((t, k) => t.setAttribute('aria-selected', k===i ? 'true' : 'false'));
         title.innerHTML = d.title;
         eyebrow.textContent = d.eyebrow;
         plate.className = 'featured-plate';
         plate.style.background = '';
         const plateImg = {
-          a: 'assets/plate-strategy-direction.png',
-          b: 'assets/plate-applied-intelligence.png',
-          c: 'assets/plate-standing-advisory.png',
-          d: 'assets/plate-risk-resilience.png',
+          a: 'assets/plate-strategy-direction.webp',
+          b: 'assets/plate-applied-intelligence.webp',
+          c: 'assets/plate-standing-advisory.webp',
+          d: 'assets/plate-risk-resilience.webp',
         };
         const stillBg = (src) =>
           "linear-gradient(180deg, rgba(5,10,18,0.35) 0%, rgba(5,10,18,0.55) 100%), url('" + src + "') center/cover no-repeat";
