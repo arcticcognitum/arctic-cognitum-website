@@ -3,6 +3,12 @@
 
 .profile-page{ background: var(--bg); color: var(--ink); }
 
+/* Optical correction for Cormorant italic accents (see styles-v4.css) */
+.profile-name em, .profile-section h2 em, .bio p em{
+  font-size: 1.12em;
+  line-height: 1;
+}
+
 /* ---------- nav ---------- */
 .pnav{
   position: sticky; top: 0; z-index: 50;

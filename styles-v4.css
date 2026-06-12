@@ -25,6 +25,14 @@
 }
 
 *{ box-sizing: border-box; }
+
+/* Optical correction: Cormorant Garamond runs ~12% smaller than Geist at the
+   same font-size, so serif-italic accent words get scaled up to match. */
+.featured-title em, .four-up-head h2 em, .article-title em,
+.practice-strip-head h2 em, .practice-row h3 em, .people-head h2 em{
+  font-size: 1.12em;
+  line-height: 1;
+}
 .sr-only{
   position:absolute; width:1px; height:1px; padding:0; margin:-1px;
   overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0;
